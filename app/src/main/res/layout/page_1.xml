@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="316dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tapez le facteur d&apos;échelle, ou séléctionnez une échelle dans la liste."
+        android:id="@+id/textView"
+        android:layout_weight="0.07" />
+
+    <GridLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.21"
+        android:weightSum="1"
+        android:showDividers="middle">
+
+        <EditText
+            android:id="@+id/fac"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:inputType="numberDecimal"
+            android:layout_gravity="left">
+        </EditText>
+
+        <ListView
+            android:layout_width="174dp"
+            android:layout_height="78dp"
+            android:id="@+id/listviewperso" />
+    </GridLayout>
+    <TextView
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tapez la dimension du plan."
+        android:id="@+id/textView2"
+        android:layout_weight="0.03" />
+    <EditText
+        android:id="@+id/cote"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:inputType="numberDecimal">
+    </EditText>
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculer"
+        android:layout_gravity="center_horizontal">
+    </Button>
+
+    <EditText
+        android:id="@+id/tt"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:text=" " >
+    </EditText>
+</LinearLayout>
