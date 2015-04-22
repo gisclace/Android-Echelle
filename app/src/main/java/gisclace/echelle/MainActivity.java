@@ -27,11 +27,18 @@ public class MainActivity extends TabActivity {
         m2.setIndicator("Trouver une échelle");
         Intent m2Intent = new Intent(this, Menu2.class);
         m2.setContent(m2Intent);
+
+        // Tab du troisieme menu
+        TabSpec m3 = tabHost.newTabSpec("Trouver une échelle");
+        m3.setIndicator("Pourcentage d'échelle");
+        Intent m3Intent = new Intent(this, Menu3.class);
+        m3.setContent(m3Intent);
 ;
 
         // TabSpec --> TabHost
         tabHost.addTab(m1); // Tab menu 1
         tabHost.addTab(m2); // Tab menu 2
+        tabHost.addTab(m3); // Tab menu 3
 
     }
 }
