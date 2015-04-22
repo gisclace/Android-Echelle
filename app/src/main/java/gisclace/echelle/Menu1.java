@@ -118,11 +118,20 @@ public class Menu1 extends Activity {
             }
         });
     }
+
     private void calculate()
     {
+        final String loginTxt = fac.getText().toString();
+        final String passTxt = cote.getText().toString();
+
+        if (loginTxt.equals("") || passTxt.equals("")) {
+            tt.setText("Veuillez remplir tous les champs");
+            return;
+        }
         float v = Float.parseFloat(fac.getText().toString());
         float w = Float.parseFloat(cote.getText().toString());
-        tt.setText(String.valueOf( v * w ));
+
+            tt.setText(String.valueOf( v * w ));
     }
 
     @Override
